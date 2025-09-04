@@ -1,22 +1,22 @@
 [![Sponsor](https://img.shields.io/badge/Sponsor-Loqa-ff69b4?logo=githubsponsors&style=for-the-badge)](https://github.com/sponsors/annabarnes1138)
 [![Ko-fi](https://img.shields.io/badge/Buy%20me%20a%20coffee-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white&style=for-the-badge)](https://ko-fi.com/annabarnes)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL--3.0-blue?style=for-the-badge)](LICENSE)
-[![Made with ❤️ by LoqaLabs](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F-by%20LoqaLabs-ffb6c1?style=for-the-badge)](https://loqalabs.com)
+[![Made with ❤️ by Loqa Labs](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F-by%20Loqa Labs-ffb6c1?style=for-the-badge)](https://loqalabs.com)
 
-# 🌐 LoqaLabs Company Website
+# 🌐 Loqa Labs Company Website
 
 [![CI/CD Pipeline](https://github.com/loqalabs/www-loqalabs-com/actions/workflows/deploy.yml/badge.svg)](https://github.com/loqalabs/www-loqalabs-com/actions/workflows/deploy.yml)
 
-The official website for LoqaLabs - showcasing our local-first voice assistant platform and open-source projects.
+The official website for Loqa Labs - showcasing our local-first voice assistant platform and open-source projects.
 
 ## Overview
 
-This website serves as the primary web presence for LoqaLabs, featuring:
+This website serves as the primary web presence for Loqa Labs, featuring:
 
 - **Product Showcase**: Information about the Loqa voice assistant system
 - **Documentation Hub**: Links to project documentation and getting started guides  
 - **Open Source**: Showcasing our commitment to open-source development
-- **Contact Information**: Ways to connect with the LoqaLabs team
+- **Contact Information**: Ways to connect with the Loqa Labs team
 - **Community Resources**: Links to GitHub, Discord, and other community platforms
 
 ## Tech Stack

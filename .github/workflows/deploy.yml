@@ -22,7 +22,7 @@ concurrency:
 jobs:
   security:
     name: Security Analysis
-    uses: loqalabs/loqalabs-org/.github/workflows/reusable-security.yml@main
+    uses: loqalabs/.github/workflows/reusable-security.yml@main
     with:
       language: 'javascript'
       node-version: '20'

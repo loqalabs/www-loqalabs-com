@@ -1,0 +1,81 @@
+name: Bug Report
+description: File a bug report to help us improve the LoqaLabs website
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - annabarnes1138
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component is affected?
+      options:
+        - Homepage
+        - Navigation
+        - Product Pages
+        - Documentation Links
+        - Contact Forms
+        - Mobile Layout
+        - Browser Compatibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of the website are you viewing?
+      placeholder: ex. latest deployment, main branch, commit hash
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Browser Environment
+      description: |
+        Please provide details about your browser environment:
+        - Browser name and version
+        - Operating System
+        - Device type (Desktop, Mobile, Tablet)
+        - Screen resolution (if relevant)
+      placeholder: |
+        Browser: Chrome 121.0.0
+        OS: macOS 14.1
+        Device: Desktop
+        Screen: 1920x1080
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/loqalabs/loqa/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

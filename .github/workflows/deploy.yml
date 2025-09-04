@@ -31,18 +31,18 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Add CNAME file
-        run: echo 'www.loqalabs.com' > build/CNAME
+        run: echo 'www.loqalabs.com' > dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ./dist
 
   deploy:
     environment:

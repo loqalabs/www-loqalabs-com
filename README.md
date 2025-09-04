@@ -1,51 +1,5 @@
-# Loqa Labs Website
+# Vue 3 + TypeScript + Vite
 
-The official website for Loqa Labs - a privacy-first, local voice assistant platform.
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## About Loqa
-
-Loqa is a local-first voice assistant that runs entirely offline, featuring hardware "pucks" for room-scale voice capture and a local hub that handles STT, LLM parsing, and command chaining.
-
-## Development
-
-Install dependencies:
-
-```bash
-yarn install
-```
-
-Start development server:
-
-```bash
-yarn dev
-```
-
-## Building
-
-Create a production build:
-
-```bash
-yarn build
-```
-
-Preview the production build:
-
-```bash
-yarn preview
-```
-
-## Deployment
-
-This site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch. It will be available at `www.loqalabs.com`.
-
-## Tech Stack
-
-- **Framework:** SvelteKit with static adapter
-- **Styling:** Tailwind CSS 4
-- **Build Tool:** Vite
-- **Deployment:** GitHub Pages with custom domain
-- **Code Quality:** ESLint + Prettier
-
-## License
-
-AGPLv3 Licensed - see [main Loqa organization](https://github.com/loqalabs) for details.
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).

@@ -32,8 +32,9 @@ const router = createRouter({
     {
       path: '/docs',
       name: 'docs',
-      beforeEnter() {
+      redirect: () => {
         window.location.href = 'https://loqalabs.github.io/loqa/'
+        return ''
       }
     }
   ]

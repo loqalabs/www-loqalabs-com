@@ -84,4 +84,6 @@ We welcome contributions to improve the website! Please see our [Contributing Gu
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0. See [LICENSE](LICENSE) for details.
+This project is licensed under the GNU Affero General Public License v3.0. See [LICENSE](LICENSE) for details. 
+ 
+ 

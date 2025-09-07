@@ -37,11 +37,21 @@
     "testing": "Include appropriate test coverage for changes"
   },
   "repository_context": {
-    "structure": "loqalabs/ contains multiple individual git repositories",
-    "cross_repo_workflow": {
-      "simple_changes": "Make directly to main branch of supporting repos",
-      "complex_changes": "Create matching feature branches across affected repos",
-      "merge_order": "Supporting repos first, primary repo last"
+    "service_role": "Public marketing website - showcases Loqa platform and provides user-facing information",
+    "service_type": "Marketing website (Next.js/React)",
+    "dependencies": [],
+    "independent_service": true,
+    "microservice_architecture": {
+      "structure": "Part of loqalabs/ microservice ecosystem - each subfolder is an independent git repository",
+      "peer_services_location": "../ (one folder up from current repo)",
+      "check_before_cloning": "Always check if ../SERVICE_NAME exists before attempting to clone repositories",
+      "website_role": "Public-facing marketing site - mostly independent of other services",
+      "content_coordination": "May need to coordinate messaging and technical content with main project",
+      "cross_service_changes": {
+        "simple_changes": "Website updates are usually independent",
+        "content_sync": "Coordinate technical documentation with main repo when needed",
+        "merge_order": "Can be updated independently - no service dependencies"
+      }
     }
   },
   "best_practices": [

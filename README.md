@@ -14,7 +14,7 @@ The official website for Loqa Labs - showcasing our local-first voice assistant 
 This website serves as the primary web presence for Loqa Labs, featuring:
 
 - **Product Showcase**: Information about the Loqa voice assistant system
-- **Documentation Hub**: Links to project documentation and getting started guides  
+- **Documentation Hub**: Links to project documentation and getting started guides
 - **Open Source**: Showcasing our commitment to open-source development
 - **Contact Information**: Ways to connect with the Loqa Labs team
 - **Community Resources**: Links to GitHub, Discord, and other community platforms
@@ -84,6 +84,4 @@ We welcome contributions to improve the website! Please see our [Contributing Gu
 
 ## License
 
-This project is licensed under the GNU Affero General Public License v3.0. See [LICENSE](LICENSE) for details. 
- 
- 
+This project is licensed under the GNU Affero General Public License v3.0. See [LICENSE](LICENSE) for details.

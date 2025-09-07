@@ -8,12 +8,16 @@
     "Reference issue numbers in commits when applicable",
     "Update ALL affected documentation proactively without being asked",
     "Test that changes don't break existing functionality",
-    "Maintain backward compatibility where possible"
+    "Maintain backward compatibility where possible",
+    "ALWAYS run 'npm run quality-check' before any git push or commit",
+    "NEVER push code that fails linting, formatting, type checking, or tests",
+    "Fix all unused variables and ensure consistent code formatting",
+    "Run 'npm run lint' to auto-fix formatting issues before manual fixes"
   ],
   "documentation_checklist": [
     "README.md files (main and service-specific)",
     "Architecture documentation",
-    "Configuration guides and environment variables", 
+    "Configuration guides and environment variables",
     "CLAUDE.md (commands, services, ports, workflows)",
     "Getting started guides if user experience changes",
     "Docker compose comments for new services"
@@ -32,13 +36,13 @@
   },
   "workflow_principles": {
     "scope_boundaries": "Ask for clarification when scope is unclear",
-    "technical_approach": "Propose options when multiple paths exist", 
+    "technical_approach": "Propose options when multiple paths exist",
     "dependencies": "Stop and ask when blockers are found",
     "testing": {
       "coverage_requirements": "Maintain high test coverage for all code changes",
       "unit_tests": "Write unit tests for all new functions, methods, and business logic",
       "component_tests": "Add React component tests using testing library best practices",
-      "integration_tests": "Test page functionality and user interactions", 
+      "integration_tests": "Test page functionality and user interactions",
       "edge_cases": "Test error conditions, boundary values, and failure scenarios",
       "regression_tests": "Add tests that prevent reoccurrence of fixed bugs",
       "test_before_commit": "Run existing tests before committing to ensure no breakage",
@@ -66,7 +70,7 @@
   },
   "best_practices": [
     "Preserve privacy-first design principles",
-    "Maintain microservice architecture benefits", 
+    "Maintain microservice architecture benefits",
     "Keep changes focused and atomic",
     "Update cross-repository references consistently",
     "Use consistent tagging and categorization",

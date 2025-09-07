@@ -7,27 +7,27 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePage
+      component: HomePage,
     },
     {
       path: '/loqa',
       name: 'loqa',
-      component: () => import('../views/LoqaPage.vue')
+      component: () => import('../views/LoqaPage.vue'),
     },
     {
       path: '/use-cases',
       name: 'use-cases',
-      component: () => import('../views/UseCasesPage.vue')
+      component: () => import('../views/UseCasesPage.vue'),
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutPage.vue')
+      component: () => import('../views/AboutPage.vue'),
     },
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('../views/ContactPage.vue')
+      component: () => import('../views/ContactPage.vue'),
     },
     {
       path: '/docs',
@@ -35,9 +35,9 @@ const router = createRouter({
       redirect: () => {
         window.location.href = 'https://loqalabs.github.io/loqa/'
         return ''
-      }
-    }
-  ]
+      },
+    },
+  ],
 })
 
 export default router

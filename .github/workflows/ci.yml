@@ -1,14 +1,13 @@
-# .github/workflows/deploy.yml
-# Test deploy workflow with js-deploy-pages.yml
-name: Deploy to GitHub Pages
+# .github/workflows/ci.yml
+name: CI/CD Pipeline (Using Reusable Workflows)
 
 on:
   push:
-    branches:
-      - main
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
+    branches: [main, develop]
+  release:
+    types: [published]
 
 permissions:
   contents: read
@@ -18,7 +17,7 @@ permissions:
   actions: read
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:

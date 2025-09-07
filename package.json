@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint:check": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "vue-tsc --noEmit",
+    "quality-check": "npm run lint:check && npm run format:check && npm run type-check"
   },
   "dependencies": {
     "@types/node": "^24.3.0",
@@ -14,10 +20,18 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.7.2",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.21.1",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "postcss": "^8.5.6",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.0",
     "typescript": "~5.8.3",
     "vite": "^7.1.2",

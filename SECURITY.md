@@ -19,13 +19,13 @@ You should receive a response within 48 hours. If for some reason you do not, pl
 
 Please include the following information in your report (as much as you can provide to help us understand the nature and scope of the possible issue):
 
-* Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
-* Full paths of source file(s) related to the manifestation of the issue
-* The location of the affected source code (tag/branch/commit or direct URL)
-* Any special configuration required to reproduce the issue
-* Step-by-step instructions to reproduce the issue
-* Proof-of-concept or exploit code (if possible)
-* Impact of the issue, including how an attacker might exploit the issue
+- Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
+- Full paths of source file(s) related to the manifestation of the issue
+- The location of the affected source code (tag/branch/commit or direct URL)
+- Any special configuration required to reproduce the issue
+- Step-by-step instructions to reproduce the issue
+- Proof-of-concept or exploit code (if possible)
+- Impact of the issue, including how an attacker might exploit the issue
 
 This information will help us triage your report more quickly.
 
@@ -51,7 +51,7 @@ This security policy applies to:
 
 - **loqa** - Main orchestration and documentation repository
 - **loqa-hub** - Central hub service for voice processing
-- **loqa-device-service** - Device control and command execution service  
+- **loqa-device-service** - Device control and command execution service
 - **loqa-proto** - Shared protocol definitions and generated bindings
 - **loqa-relay** - Audio capture device implementation (test client and firmware)
 - **loqa-skills** - Voice assistant skills and integrations
@@ -78,16 +78,19 @@ We ask that you:
 Loqa is designed with privacy and security as core principles:
 
 ### Local-First Architecture
+
 - All voice processing happens locally on your network
 - No data is sent to external servers without explicit user configuration
 - Audio data is processed in memory and not persisted by default
 
 ### Network Security
+
 - Services communicate via localhost by default
 - gRPC communication uses standard security practices
 - All external API calls are explicitly configured by users
 
 ### Data Protection
+
 - Voice recordings are processed in real-time and discarded
 - Configuration and logs should not contain sensitive information
 - Users have full control over what data (if any) leaves their network

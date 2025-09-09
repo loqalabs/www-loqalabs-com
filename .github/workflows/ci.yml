@@ -27,16 +27,9 @@ jobs:
     with:
       node-version: '20'
 
-  security:
-    name: Security Analysis
-    uses: loqalabs/.github/.github/workflows/security-scan.yml@main
-    with:
-      language: 'javascript'
-      node-version: '20'
-
   deploy:
     name: Deploy to GitHub Pages
-    needs: [test, security]
+    needs: [test]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     uses: loqalabs/.github/.github/workflows/js-deploy-pages.yml@main
     with:

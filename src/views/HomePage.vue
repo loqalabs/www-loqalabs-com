@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 relative overflow-hidden">
       <div
-        class="absolute inset-0 bg-gradient-to-br from-loqa-blue/5 via-transparent to-loqa-gold/5"
+        class="absolute inset-0 bg-linear-to-br from-loqa-blue/5 via-transparent to-loqa-gold/5"
       ></div>
       <div class="max-w-4xl mx-auto text-center relative z-10">
         <!-- Loqa Labs Logo -->
@@ -16,7 +16,7 @@
         </div>
 
         <h1
-          class="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+          class="text-3xl md:text-5xl font-bold mb-6 bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent"
         >
           Voice tech that listens — but never listens in.
         </h1>
@@ -132,7 +132,7 @@
 
     <!-- What Makes Loqa Different -->
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
-      <div class="max-w-screen-lg mx-auto">
+      <div class="max-w-(--breakpoint-lg) mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-loqa-gold">
             What Makes Loqa Different
@@ -291,7 +291,7 @@
 
     <!-- Use Cases Preview -->
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
-      <div class="max-w-screen-lg mx-auto">
+      <div class="max-w-(--breakpoint-lg) mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">Use Cases</h2>
           <p class="text-lg text-gray-300">Discover how Loqa can transform your daily workflows</p>
@@ -386,7 +386,7 @@
 
     <!-- Ready to Speak Freely CTA -->
     <section
-      class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-loqa-blue to-cyan-600 relative overflow-hidden"
+      class="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-loqa-blue to-cyan-600 relative overflow-hidden"
     >
       <div class="absolute inset-0 bg-black/20"></div>
       <div class="max-w-4xl mx-auto text-center relative z-10">

@@ -144,8 +144,13 @@
     </section>
 
     <!-- What Makes Loqa Different -->
+<<<<<<< Updated upstream
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
+      <div class="max-w-(--breakpoint-lg) mx-auto">
+=======
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div class="max-w-screen-lg mx-auto">
+>>>>>>> Stashed changes
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-loqa-gold">
             What Makes Loqa Different
@@ -273,8 +278,13 @@
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-loqa-gold">Our Values</h2>
         </div>
+<<<<<<< Updated upstream
+
+        <div class="grid md:grid-cols-3 gap-8">
+=======
         
         <div class="grid md:grid-cols-3 gap-8 space-y-16 md:space-y-0">
+>>>>>>> Stashed changes
           <!-- Value 1: Local-First -->
           <div class="text-center">
             <h3 class="text-2xl font-bold mb-4 text-loqa-blue">Local-First</h3>
@@ -303,61 +313,113 @@
     </section>
 
     <!-- Use Cases Preview -->
+<<<<<<< Updated upstream
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
+      <div class="max-w-(--breakpoint-lg) mx-auto">
+=======
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div class="max-w-screen-lg mx-auto">
+>>>>>>> Stashed changes
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">Use Cases</h2>
           <p class="text-lg text-gray-300">Discover how Loqa can transform your daily workflows</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<<<<<<< Updated upstream
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🏠</div>
+=======
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🏠</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Smart Home Control</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Voice control for lights, thermostats, and IoT devices. Everything stays local—no data
               leaves your network.
             </p>
           </div>
+<<<<<<< Updated upstream
+
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🧑‍⚕️</div>
+=======
           
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🧑‍⚕️</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Therapists & Coaches</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Dictate secure session notes without the cloud. Ideal for HIPAA-conscious practices
               who need privacy and speed.
             </p>
           </div>
+<<<<<<< Updated upstream
+
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🛍️</div>
+=======
           
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🛍️</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Retail & Hospitality</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Customer assistance powered by your private inventory data. Answer questions about
               products, hours, and services.
             </p>
           </div>
+<<<<<<< Updated upstream
+
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🏭</div>
+=======
           
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🏭</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Industrial & Warehouse</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Hands-free operations for inventory management, quality control, and equipment
               monitoring in rugged environments.
             </p>
           </div>
+<<<<<<< Updated upstream
+
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🧩</div>
+=======
           
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🧩</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Custom Development</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Build domain-specific voice assistants. Integrate with your existing tools and
               workflows using our open APIs.
             </p>
           </div>
+<<<<<<< Updated upstream
+
+          <div
+            class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <div class="text-4xl mb-4">🏡</div>
+=======
           
           <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
             <div class="text-5xl mb-4">🏡</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Accessibility Tools</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Voice interfaces for users with mobility challenges or visual impairments. Private,
@@ -551,6 +613,10 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< Updated upstream
+// HomePage component with new Loqa design
+</script>
+=======
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useSwipe } from '@vueuse/core'
 import LoqaCarousel from '@/components/LoqaCarousel.vue'
@@ -559,7 +625,7 @@ import LoqaChatCard from '@/components/LoqaChatCard.vue'
 const currentExample = ref(0)
 const isPaused = ref(false)
 const swipeTarget = ref(null)
-let interval: ReturnType<typeof setInterval>
+let interval: NodeJS.Timeout
 
 useSwipe(swipeTarget, {
   onSwipeLeft: () => (currentExample.value = (currentExample.value + 1) % 6),
@@ -629,3 +695,4 @@ onUnmounted(() => clearInterval(interval))
   animation-delay: 0.15s;
 }
 </style>
+>>>>>>> Stashed changes

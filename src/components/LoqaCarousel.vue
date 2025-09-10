@@ -38,29 +38,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, useSlots } from 'vue'
 import { useSwipe } from '@vueuse/core'
 
+const slots = useSlots()
 const currentExample = ref(0)
 const isPaused = ref(false)
 const swipeTarget = ref(null)
-let interval: NodeJS.Timeout
+let interval: ReturnType<typeof setInterval>
 
 useSwipe(swipeTarget, {
-  onSwipeLeft: () => currentExample.value = (currentExample.value + 1) % ($slots.default?.().length || 1),
-  onSwipeRight: () => currentExample.value = (currentExample.value - 1 + ($slots.default?.().length || 1)) % ($slots.default?.().length || 1),
+  onSwipeLeft: () => currentExample.value = (currentExample.value + 1) % (slots.default?.().length || 1),
+  onSwipeRight: () => currentExample.value = (currentExample.value - 1 + (slots.default?.().length || 1)) % (slots.default?.().length || 1),
 })
 
 onMounted(() => {
   interval = setInterval(() => {
-    if (!isPaused.value && $slots.default?.().length)
-      currentExample.value = (currentExample.value + 1) % $slots.default().length
+    if (!isPaused.value && slots.default?.().length)
+      currentExample.value = (currentExample.value + 1) % slots.default().length
   }, 7000)
 })
 
 onUnmounted(() => clearInterval(interval))
 </script>
-</style>
+
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {

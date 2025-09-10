@@ -1,10 +1,8 @@
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-950 relative overflow-hidden">
-      <div
-        class="absolute inset-0 bg-linear-to-br from-loqa-blue/5 via-transparent to-loqa-gold/5"
-      ></div>
+    <section class="py-32 px-4 sm:px-6 lg:px-8 bg-slate-950 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-loqa-blue/5 via-transparent to-loqa-gold/5"></div>
       <div class="max-w-4xl mx-auto text-center relative z-10">
         <!-- Loqa Labs Logo -->
         <div class="mb-8">
@@ -14,13 +12,11 @@
             class="h-48 w-auto mx-auto rounded-lg border-2 border-loqa-blue/30 p-3 bg-dark-slate/20 shadow-2xl"
           />
         </div>
-
-        <h1
-          class="text-3xl md:text-5xl font-bold mb-6 bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent"
-        >
+        
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
           Voice tech that listens — but never listens in.
         </h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
           All the magic. None of the strings.
         </p>
 
@@ -29,13 +25,13 @@
           <a
             href="https://loqalabs.github.io/loqa/"
             target="_blank"
-            class="bg-loqa-blue text-black font-semibold px-6 py-3 rounded-lg hover:bg-cyan-400 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            class="bg-loqa-blue text-black font-semibold text-lg px-6 py-3 rounded-lg hover:bg-cyan-400 transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             Get Started in 5 Minutes
           </a>
-          <RouterLink
-            to="/loqa"
-            class="border border-gray-600 text-gray-300 font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-200"
+          <RouterLink 
+            to="/loqa" 
+            class="border border-gray-600 text-gray-300 font-semibold text-lg px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-200"
           >
             Learn About Loqa
           </RouterLink>
@@ -46,10 +42,9 @@
     <!-- Loqa Section -->
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
       <div class="max-w-6xl mx-auto">
-        <div
-          class="bg-gray-900/50 rounded-xl p-8 hover:bg-gray-900/70 transition-colors duration-300"
-        >
-          <div class="flex flex-col md:flex-row items-center">
+        
+        <div class="bg-gray-900/50 rounded-xl p-8 hover:bg-gray-900/70 transition-colors duration-300">
+          <div class="flex flex-col md:flex-row items-center md:gap-16">
             <div class="flex-1 md:pr-8 mb-6 md:mb-0">
               <div class="flex items-center mb-4">
                 <img
@@ -93,14 +88,32 @@
               </RouterLink>
             </div>
             <div class="flex-1 max-w-md">
-              <div class="bg-black/30 rounded-lg p-6 border border-gray-700">
-                <div class="text-sm text-gray-400 mb-2">$ loqa</div>
-                <div class="text-green-400 mb-2">Loqa is listening...</div>
-                <div class="text-loqa-blue mb-1">&gt; "Turn on the living room lights"</div>
-                <div class="text-gray-300 mb-2">✓ Living room lights turned on</div>
-                <div class="text-loqa-blue mb-1">&gt; "What's the weather?"</div>
-                <div class="text-gray-300">⛅ Currently 72°F, partly cloudy</div>
-              </div>
+              <LoqaCarousel>
+                <LoqaChatCard 
+                  user-request="Dim the kitchen lights, play something relaxing, and set a 10-minute timer for the pasta."
+                  loqa-reply="✓ Kitchen lights dimmed. Playing local ambient playlist. Timer set for 10 minutes." 
+                  caption="Loqa understands and executes multiple instructions in one sentence — no pauses or rephrasing required." />
+                <LoqaChatCard 
+                  user-request="Turn off everything except the living room."
+                  loqa-reply="✓ Lights and music turned off in all rooms except the living room."
+                  caption="Loqa recognizes logical exceptions, turning off devices intelligently based on location." />
+                <LoqaChatCard 
+                  user-request="In 10 minutes, remind me to take out the laundry."
+                  loqa-reply="⏱️ Reminder set. I’ll nudge you in 10."
+                  caption="Loqa sets timers and reminders without needing to clarify what 'in 10 minutes' means." />
+                <LoqaChatCard 
+                  user-request="Turn off the lights in whichever rooms are empty."
+                  loqa-reply="✓ Lights turned off in 3 unoccupied rooms."
+                  caption="Loqa uses sensor or occupancy data to make intelligent decisions — no manual room selection." />
+                <LoqaChatCard 
+                  user-request="Make it cozy in here."
+                  loqa-reply="✓ Lights dimmed. Temperature set to 72°F. Ambient sounds playing."
+                  caption="Loqa interprets vague commands using learned preferences and local context." />
+                <LoqaChatCard 
+                  user-request="Where did I leave my phone?"
+                  loqa-reply="📍 Last detected near the kitchen puck, 2 minutes ago."
+                  caption="Loqa tracks device proximity across rooms to provide helpful updates, all locally." />
+              </LoqaCarousel>
             </div>
           </div>
 
@@ -131,8 +144,13 @@
     </section>
 
     <!-- What Makes Loqa Different -->
+<<<<<<< Updated upstream
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
       <div class="max-w-(--breakpoint-lg) mx-auto">
+=======
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <div class="max-w-screen-lg mx-auto">
+>>>>>>> Stashed changes
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-loqa-gold">
             What Makes Loqa Different
@@ -157,7 +175,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">100% Private</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">100% Private</h3>
             <p class="text-gray-300">All voice data stays on your network</p>
           </div>
 
@@ -175,7 +193,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Natural Commands</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">Natural Commands</h3>
             <p class="text-gray-300">Speak like a human, not a robot</p>
           </div>
 
@@ -193,7 +211,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Fully Hackable</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">Fully Hackable</h3>
             <p class="text-gray-300">Tweak everything. Extend anything.</p>
           </div>
 
@@ -211,7 +229,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Lightning Fast</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">Lightning Fast</h3>
             <p class="text-gray-300">Local-first means no lag</p>
           </div>
 
@@ -229,7 +247,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Real-time Timeline</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">Real-time Timeline</h3>
             <p class="text-gray-300">Debug voice interactions visually</p>
           </div>
 
@@ -247,7 +265,7 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-white">Community Driven</h3>
+            <h3 class="text-lg font-extrabold mb-3 text-white">Community Driven</h3>
             <p class="text-gray-300">Built in public with transparent values</p>
           </div>
         </div>
@@ -260,8 +278,13 @@
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 text-loqa-gold">Our Values</h2>
         </div>
+<<<<<<< Updated upstream
 
         <div class="grid md:grid-cols-3 gap-8">
+=======
+        
+        <div class="grid md:grid-cols-3 gap-8 space-y-16 md:space-y-0">
+>>>>>>> Stashed changes
           <!-- Value 1: Local-First -->
           <div class="text-center">
             <h3 class="text-2xl font-bold mb-4 text-loqa-blue">Local-First</h3>
@@ -290,73 +313,113 @@
     </section>
 
     <!-- Use Cases Preview -->
+<<<<<<< Updated upstream
     <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-950">
       <div class="max-w-(--breakpoint-lg) mx-auto">
+=======
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <div class="max-w-screen-lg mx-auto">
+>>>>>>> Stashed changes
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">Use Cases</h2>
           <p class="text-lg text-gray-300">Discover how Loqa can transform your daily workflows</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<<<<<<< Updated upstream
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🏠</div>
+=======
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🏠</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Smart Home Control</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Voice control for lights, thermostats, and IoT devices. Everything stays local—no data
               leaves your network.
             </p>
           </div>
+<<<<<<< Updated upstream
 
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🧑‍⚕️</div>
+=======
+          
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🧑‍⚕️</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Therapists & Coaches</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Dictate secure session notes without the cloud. Ideal for HIPAA-conscious practices
               who need privacy and speed.
             </p>
           </div>
+<<<<<<< Updated upstream
 
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🛍️</div>
+=======
+          
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🛍️</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Retail & Hospitality</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Customer assistance powered by your private inventory data. Answer questions about
               products, hours, and services.
             </p>
           </div>
+<<<<<<< Updated upstream
 
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🏭</div>
+=======
+          
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🏭</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Industrial & Warehouse</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Hands-free operations for inventory management, quality control, and equipment
               monitoring in rugged environments.
             </p>
           </div>
+<<<<<<< Updated upstream
 
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🧩</div>
+=======
+          
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🧩</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Custom Development</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Build domain-specific voice assistants. Integrate with your existing tools and
               workflows using our open APIs.
             </p>
           </div>
+<<<<<<< Updated upstream
 
           <div
             class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300"
           >
             <div class="text-4xl mb-4">🏡</div>
+=======
+          
+          <div class="bg-gray-900/50 rounded-lg p-6 shadow-md hover:shadow-xl transform hover:scale-[1.02] hover:bg-gray-900/70 transition-all duration-300">
+            <div class="text-5xl mb-4">🏡</div>
+>>>>>>> Stashed changes
             <h3 class="text-xl font-semibold mb-3 text-white">Accessibility Tools</h3>
             <p class="text-gray-400 text-sm leading-relaxed">
               Voice interfaces for users with mobility challenges or visual impairments. Private,
@@ -414,7 +477,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black/50 border-t border-gray-800 py-16 px-4 sm:px-6 lg:px-8">
+    <footer class="bg-black/50 border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-4 gap-8 mb-8">
           <!-- Column 1: Brand -->
@@ -550,5 +613,86 @@
 </template>
 
 <script setup lang="ts">
+<<<<<<< Updated upstream
 // HomePage component with new Loqa design
 </script>
+=======
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useSwipe } from '@vueuse/core'
+import LoqaCarousel from '@/components/LoqaCarousel.vue'
+import LoqaChatCard from '@/components/LoqaChatCard.vue'
+
+const currentExample = ref(0)
+const isPaused = ref(false)
+const swipeTarget = ref(null)
+let interval: NodeJS.Timeout
+
+useSwipe(swipeTarget, {
+  onSwipeLeft: () => (currentExample.value = (currentExample.value + 1) % 6),
+  onSwipeRight: () => (currentExample.value = (currentExample.value + 5) % 6),
+})
+
+onMounted(() => {
+  interval = setInterval(() => {
+    if (!isPaused.value) currentExample.value = (currentExample.value + 1) % 6
+  }, 7000)
+})
+
+onUnmounted(() => clearInterval(interval))
+</script>
+
+<style>
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.chat-bubble {
+  @apply px-4 py-2 rounded-xl max-w-xs text-sm font-normal;
+  white-space: pre-line;
+}
+
+.chat-bubble.user {
+  @apply bg-gray-100 text-gray-900 border border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600;
+}
+
+.chat-bubble.loqa {
+  @apply bg-loqa-blue/10 text-loqa-blue border border-loqa-blue font-semibold;
+  position: relative;
+}
+
+
+.carousel-caption {
+  @apply text-sm text-gray-400 italic pt-2;
+}
+</style>
+
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.delay-150 {
+  animation-delay: 0.15s;
+}
+</style>
+>>>>>>> Stashed changes

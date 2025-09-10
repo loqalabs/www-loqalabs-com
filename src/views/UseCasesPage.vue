@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h1
-          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-linear-to-r from-white to-neutral-300 bg-clip-text text-transparent"
         >
           Where Voice Meets Privacy
         </h1>
@@ -190,7 +190,7 @@
       </div>
 
       <div
-        class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 text-center border border-blue-500/30"
+        class="bg-linear-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 text-center border border-blue-500/30"
       >
         <div class="text-4xl mb-6">🧩</div>
         <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Need something specific?</h2>

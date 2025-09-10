@@ -24,14 +24,16 @@
         class="w-3 h-3 rounded-full border border-white/20 shadow transition-all duration-300"
         :class="{
           'bg-loqa-blue scale-110': currentExample === index,
-          'bg-gray-500 opacity-60 hover:opacity-100': currentExample !== index
+          'bg-gray-500 opacity-60 hover:opacity-100': currentExample !== index,
         }"
         @click="currentExample = index"
       />
     </div>
 
     <!-- Swipe hint -->
-    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 sm:hidden">
+    <div
+      class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs text-gray-500 sm:hidden"
+    >
       Swipe left or right →
     </div>
   </div>
@@ -48,8 +50,12 @@ const swipeTarget = ref(null)
 let interval: ReturnType<typeof setInterval>
 
 useSwipe(swipeTarget, {
-  onSwipeLeft: () => currentExample.value = (currentExample.value + 1) % (slots.default?.().length || 1),
-  onSwipeRight: () => currentExample.value = (currentExample.value - 1 + (slots.default?.().length || 1)) % (slots.default?.().length || 1),
+  onSwipeLeft: () =>
+    (currentExample.value = (currentExample.value + 1) % (slots.default?.().length || 1)),
+  onSwipeRight: () =>
+    (currentExample.value =
+      (currentExample.value - 1 + (slots.default?.().length || 1)) %
+      (slots.default?.().length || 1)),
 })
 
 onMounted(() => {
@@ -65,7 +71,9 @@ onUnmounted(() => clearInterval(interval))
 <style scoped>
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
 
 .slide-enter-from {

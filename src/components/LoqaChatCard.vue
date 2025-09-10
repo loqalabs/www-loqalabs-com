@@ -1,8 +1,16 @@
 <template>
-  <div class="w-full h-full flex flex-col justify-center items-center px-4 text-center space-y-4 transition-all duration-500">
+  <div
+    class="w-full h-full flex flex-col justify-center items-center px-4 text-center space-y-4 transition-all duration-500"
+  >
     <div class="flex items-start gap-3 w-full max-w-xs mx-auto">
-      <div class="w-10 aspect-square rounded-full bg-white/10 p-0.5 border border-gray-400 flex items-center justify-center shrink-0">
-        <img src="/src/assets/avatars/user-avatar.png" alt="User" class="w-8 h-8 rounded-full object-cover" />
+      <div
+        class="w-10 aspect-square rounded-full bg-white/10 p-0.5 border border-gray-400 flex items-center justify-center shrink-0"
+      >
+        <img
+          src="/src/assets/avatars/user-avatar.png"
+          alt="User"
+          class="w-8 h-8 rounded-full object-cover"
+        />
       </div>
       <div class="chat-bubble user animate-fade-in-up">“{{ userRequest }}”</div>
     </div>

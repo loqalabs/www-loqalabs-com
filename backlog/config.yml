@@ -1,23 +1,23 @@
-project_name: "www.loqalabs.com - Company Website"
-default_status: "To Do"
-statuses: ["To Do", "In Progress", "Done"]
-labels: 
-  - "loqa-hub"
-  - "loqa-commander" 
-  - "loqa-relay"
-  - "loqa-proto"
-  - "loqa-skills"
-  - "www-loqalabs-com"
-  - "cross-repo"
-  - "protocol-change"
-  - "bug-fix"
-  - "feature"
-  - "technical-debt"
-  - "documentation"
+project_name: 'www.loqalabs.com - Company Website'
+default_status: 'To Do'
+statuses: ['To Do', 'In Progress', 'Done']
+labels:
+  - 'loqa-hub'
+  - 'loqa-commander'
+  - 'loqa-relay'
+  - 'loqa-proto'
+  - 'loqa-skills'
+  - 'www-loqalabs-com'
+  - 'cross-repo'
+  - 'protocol-change'
+  - 'bug-fix'
+  - 'feature'
+  - 'technical-debt'
+  - 'documentation'
 milestones:
-  - "MVP-Ready"
-  - "Phase-1-Complete"
-  - "Production-Ready"
+  - 'MVP-Ready'
+  - 'Phase-1-Complete'
+  - 'Production-Ready'
 date_format: yyyy-mm-dd
 max_column_width: 20
 auto_open_browser: false

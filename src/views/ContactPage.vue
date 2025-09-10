@@ -3,7 +3,7 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h1
-          class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+          class="text-4xl md:text-6xl font-bold mb-6 bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
         >
           Contact Us
         </h1>
@@ -113,7 +113,7 @@
 
       <div class="mt-12 text-center">
         <div
-          class="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 border border-purple-500/30"
+          class="bg-linear-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8 border border-purple-500/30"
         >
           <h2 class="text-2xl font-bold mb-4 text-white">Ready to Start?</h2>
           <p class="text-neutral-300 mb-6">

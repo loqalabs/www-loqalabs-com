@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, useSlots } from 'vue'
+import { ref, onMounted, onUnmounted, useSlots, watchEffect } from 'vue'
 import { useSwipe } from '@vueuse/core'
 
 const slots = useSlots()
@@ -49,13 +49,16 @@ const isPaused = ref(false)
 const swipeTarget = ref(null)
 let interval: ReturnType<typeof setInterval>
 
-useSwipe(swipeTarget, {
-  onSwipeLeft: () =>
-    (currentExample.value = (currentExample.value + 1) % (slots.default?.().length || 1)),
-  onSwipeRight: () =>
-    (currentExample.value =
-      (currentExample.value - 1 + (slots.default?.().length || 1)) %
-      (slots.default?.().length || 1)),
+const { direction } = useSwipe(swipeTarget)
+
+// Watch for swipe direction changes
+watchEffect(() => {
+  if (direction.value === 'left') {
+    currentExample.value = (currentExample.value + 1) % (slots.default?.().length || 1)
+  } else if (direction.value === 'right') {
+    currentExample.value =
+      (currentExample.value - 1 + (slots.default?.().length || 1)) % (slots.default?.().length || 1)
+  }
 })
 
 onMounted(() => {

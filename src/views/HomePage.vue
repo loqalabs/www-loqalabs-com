@@ -574,7 +574,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watchEffect } from 'vue'
 import { useSwipe } from '@vueuse/core'
 import LoqaCarousel from '@/components/LoqaCarousel.vue'
 import LoqaChatCard from '@/components/LoqaChatCard.vue'
@@ -584,9 +584,15 @@ const isPaused = ref(false)
 const swipeTarget = ref(null)
 let interval: ReturnType<typeof setInterval>
 
-useSwipe(swipeTarget, {
-  onSwipeLeft: () => (currentExample.value = (currentExample.value + 1) % 6),
-  onSwipeRight: () => (currentExample.value = (currentExample.value + 5) % 6),
+const { direction } = useSwipe(swipeTarget)
+
+// Watch for swipe direction changes
+watchEffect(() => {
+  if (direction.value === 'left') {
+    currentExample.value = (currentExample.value + 1) % 6
+  } else if (direction.value === 'right') {
+    currentExample.value = (currentExample.value + 5) % 6
+  }
 })
 
 onMounted(() => {

@@ -1,121 +1,23 @@
 {
-  "rules": [
-    "🚨 BLOCKING: NEVER push directly to main branch - ALWAYS create feature branches",
-    "🚨 BLOCKING: ALWAYS create PRs for review - even for simple changes",
-    "🚨 BLOCKING: ALL quality checks must PASS - npm run quality-check is NON-NEGOTIABLE",
-    "🚨 BLOCKING: Production build must SUCCEED - npm run build must work",
-    "🚨 BLOCKING: Development server must START - npm run dev must serve without errors",
-    "🚨 BLOCKING: When blocked, ASK - never assume or work around errors",
-    "🚨 WEBSITE: This is mostly independent but follows same workflow standards",
-    "🚨 MARKETING: Content changes affect public perception - review carefully",
-    "NEVER use AI attribution in commit messages (no 'Generated with Claude Code' or Co-Authored-By lines)",
-    "Always read existing files before making changes",
-    "Prefer editing existing files over creating new ones when possible",
-    "Use TodoWrite tool to track progress on complex tasks",
-    "Follow established git workflow and branch naming conventions",
-    "Reference issue numbers in commits when applicable",
-    "Update ALL affected documentation proactively without being asked",
-    "Test that changes don't break existing functionality",
-    "Maintain backward compatibility where possible",
-    "Fix all unused variables and ensure consistent code formatting",
-    "Run 'npm run lint' to auto-fix formatting issues before manual fixes",
-    "When adding labels to GitHub issues: First check existing labels with 'gh label list', look for semantically similar labels, use existing ones when possible, only create new labels when genuinely needed"
-  ],
-  "documentation_checklist": [
-    "README.md files (main and service-specific)",
-    "Architecture documentation",
-    "Configuration guides and environment variables",
-    "CLAUDE.md (commands, services, ports, workflows)",
-    "Getting started guides if user experience changes",
-    "Docker compose comments for new services"
-  ],
-  "commit_guidelines": {
-    "never_include": [
-      "Generated with Claude Code",
-      "Co-Authored-By: Claude",
-      "🤖 Generated with",
-      "AI attribution"
-    ],
-    "always_include": [
-      "Reference to issue numbers when applicable",
-      "Clear description of what changed and why"
-    ]
-  },
-  "workflow_principles": {
-    "scope_boundaries": "Ask for clarification when scope is unclear",
-    "technical_approach": "Propose options when multiple paths exist",
-    "dependencies": "Stop and ask when blockers are found",
-    "testing": {
-      "coverage_requirements": "Maintain high test coverage for all code changes",
-      "unit_tests": "Write unit tests for all new functions, methods, and business logic",
-      "component_tests": "Add React component tests using testing library best practices",
-      "integration_tests": "Test page functionality and user interactions",
-      "edge_cases": "Test error conditions, boundary values, and failure scenarios",
-      "regression_tests": "Add tests that prevent reoccurrence of fixed bugs",
-      "test_before_commit": "Run existing tests before committing to ensure no breakage",
-      "seo_testing": "Test SEO meta tags, structured data, and accessibility",
-      "performance_testing": "Test page load times and Core Web Vitals metrics"
-    }
-  },
-  "repository_context": {
-    "service_role": "Public marketing website - showcases Loqa platform and provides user-facing information",
-    "service_type": "Marketing website (Next.js/React)",
+  "service_context": {
+    "name": "www-loqalabs-com",
+    "type": "vue-nuxt-website",
+    "role": "Marketing website and public documentation",
     "dependencies": [],
-    "independent_service": true,
-    "microservice_architecture": {
-      "structure": "Part of loqalabs/ microservice ecosystem - each subfolder is an independent git repository",
-      "peer_services_location": "../ (one folder up from current repo)",
-      "check_before_cloning": "Always check if ../SERVICE_NAME exists before attempting to clone repositories",
-      "website_role": "Public-facing marketing site - mostly independent of other services",
-      "content_coordination": "May need to coordinate messaging and technical content with main project",
-      "cross_service_changes": {
-        "simple_changes": "Website updates are usually independent",
-        "content_sync": "Coordinate technical documentation with main repo when needed",
-        "merge_order": "Can be updated independently - no service dependencies"
-      }
-    }
+    "affects": []
   },
-  "github_issue_management": {
-    "tagging_workflow": {
-      "step_1": "Always run 'gh label list' first to see existing labels",
-      "step_2": "Look for semantically similar labels (e.g., 'dependencies' instead of 'deps', 'type: feature' instead of 'feature')",
-      "step_3": "Use existing labels when they match the intent, even if wording is slightly different",
-      "step_4": "Only create new labels when no existing label captures the concept",
-      "step_5": "When creating new labels, follow existing naming patterns (e.g., 'area:', 'type:', 'priority:')"
-    },
-    "label_categories": {
-      "type": ["type: bug", "type: feature", "type: chore", "type: improvement"],
-      "priority": ["priority: high", "priority: medium", "priority: low"],
-      "area": ["area: backend", "area: frontend", "area: docs", "area: infrastructure"],
-      "milestone": ["p1-mvp", "p2-high-impact", "p3-future"],
-      "component": ["skills", "dashboard", "stt", "tts", "llm", "relay", "mac-mini"]
-    },
-    "common_substitutions": {
-      "deps": "dependencies",
-      "feat": "type: feature",
-      "bug": "type: bug",
-      "docs": "area: docs",
-      "ui": "area: frontend",
-      "api": "area: backend",
-      "critical": "priority: high",
-      "urgent": "priority: high",
-      "low": "priority: low"
-    }
+  "quality_commands": {
+    "quality_check": "npm run quality-check",
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "test": "npm run test"
   },
-  "best_practices": [
-    "Preserve privacy-first design principles",
-    "Maintain microservice architecture benefits",
-    "Keep changes focused and atomic",
-    "Update cross-repository references consistently",
-    "Use consistent tagging and categorization",
-    "Make changes easy to find and understand later"
-  ],
-  "avoid": [
-    "Making changes without understanding current state",
-    "Breaking existing functionality unnecessarily",
-    "Creating new files when editing existing ones works",
-    "Rushing implementation without proper planning",
-    "Ignoring dependencies between repositories",
-    "Over-analyzing ideas that just need to be captured"
+  "service_specific_rules": [
+    "🚨 BLOCKING: All pages must be mobile-responsive",
+    "🚨 CRITICAL: SEO meta tags required for all public pages",
+    "🚨 CRITICAL: Accessibility compliance (WCAG 2.1) required",
+    "Static site generation for optimal performance",
+    "Tailwind CSS for styling consistency",
+    "Content-focused development - prioritize readability and UX"
   ]
 }
